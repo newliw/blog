@@ -1,7 +1,9 @@
 ---
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
 import '../styles/global.css'
 
-const pageTitle = "关于soulliu";
+const pageTitle = "关于";
 
 const skills = ["Golang", "云平台架构"]
 
@@ -11,34 +13,35 @@ const textCase = "uppercase";
 ---
 
 <html lang="zh-cn">
-  <head>
-    <meta charset ="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
+	<head>
+		<meta charset ="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{pageTitle}</title>
 
-    <style define:vars={{skillColor, fontWeight, textCase}}>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
-	  .skill {
-		color: var(--skillColor);
-		font-weight: var(--fontWeight);
-		text-transform: var(--textCase);
-	  }
-    </style>
-  </head>
-<a href="/">首页</a>
-<a href="/blog/">博客</a>
-<a href="/about/">关于</a>
-
-<body>
-	<h1>这是我的博客</h1>
-	<p>从事软件研发近20余年，长期在一线大厂工作</p>
-	<p>这里将记录新的学习心得记录</p>
-	<p>我的技能：</p>
-	<ul>
-		{skills.map((skill) => <li class="skill">{skill}</li>)}
-	</ul>
-</body>
+		<style define:vars={{skillColor, fontWeight, textCase}}>
+		h1 {
+			color: purple;
+			font-size: 4rem;
+		}
+		.skill {
+			color: var(--skillColor);
+			font-weight: var(--fontWeight);
+			text-transform: var(--textCase);
+		}
+		</style>
+	</head>
+	<Header></Header>
+	<body>
+		<h1>这是我的博客</h1>
+		<p>从事软件研发近20余年，长期在一线大厂工作</p>
+		<p>这里将记录新的学习心得记录</p>
+		<p>我的技能：</p>
+		<ul>
+			{skills.map((skill) => <li class="skill">{skill}</li>)}
+		</ul>
+	</body>
+	<Footer></Footer>
+	<script>
+		import "../scripts/menu.js"
+	</script>
 </html>

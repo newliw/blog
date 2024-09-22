@@ -1,7 +1,9 @@
 ---
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
 import '../styles/global.css'
 
-const pageTitle = "soulliu的博客"
+const pageTitle = "首页"
 ---
 <html lang="zh-cn">
   <head>
@@ -9,12 +11,14 @@ const pageTitle = "soulliu的博客"
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
 
-	<a href="/">首页</a>
-	<a href="/blog/">博客</a>
-	<a href="/about/">关于</a>
+	<Header></Header>
 
 	<body>
 		<h1>我的博客</h1>
 		<h1>start</h1>
 	</body>
+	<Footer></Footer>
+	<script>
+		import "../scripts/menu.js"
+	</script>
 </html>
