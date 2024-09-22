@@ -1,7 +1,5 @@
 ---
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
-import '../styles/global.css'
+import BaseLayout from '../layouts/BaseLayout.astro'
 
 const pageTitle = "关于";
 
@@ -11,6 +9,16 @@ const skillColor = "navy";
 const fontWeight = "bold";
 const textCase = "uppercase";
 ---
+
+<BaseLayout pageTitle={pageTitle}>
+	<h1>这是我的博客</h1>
+	<p>从事软件研发近20余年，长期在一线大厂工作</p>
+	<p>这里将记录新的学习心得记录</p>
+	<p>我的技能：</p>
+	<ul>
+		{skills.map((skill) => <li class="skill">{skill}</li>)}
+	</ul>
+</BaseLayout>
 
 <html lang="zh-cn">
 	<head>
@@ -30,18 +38,5 @@ const textCase = "uppercase";
 		}
 		</style>
 	</head>
-	<Header></Header>
-	<body>
-		<h1>这是我的博客</h1>
-		<p>从事软件研发近20余年，长期在一线大厂工作</p>
-		<p>这里将记录新的学习心得记录</p>
-		<p>我的技能：</p>
-		<ul>
-			{skills.map((skill) => <li class="skill">{skill}</li>)}
-		</ul>
-	</body>
-	<Footer></Footer>
-	<script>
-		import "../scripts/menu.js"
-	</script>
+
 </html>
