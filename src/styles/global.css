@@ -21,7 +21,7 @@ h1 {
 }
 
 
-.humberger {
+/* .humberger {
     padding-right: 20px;
     cursor: pointer;
 }
@@ -32,37 +32,56 @@ h1 {
     height: 5px;
     margin-bottom: 10px;
     background-color: #ff9776;
-}
+} */
 
 .nav-links {
     width: 100%;
     top: 5rem;
     left: 48px;
-    background-color: #ff9776;
-    display: none;
+    display: block;
     margin: 0;
 }
 
 .nav-links a {
-    display: block;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 10px;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.nav-links a :hover,
+.nav-links a :hover{
+    background-color: royalblue;
+}
+
 .nav-links a :focus {
-    background-color: #ff9776;
+    background-color: royalblue;
 }
 
 .expanded {
     display: unset;
 }
 
-@media screen and (min-width: 636px) {
+.blog-link {
+    display: block;
+    margin: 10px 0px;
+    padding: 20px;
+    background-color: aqua;
+}
+
+.blog-link a {
+    text-decoration: none;
+}
+
+.blog-list {
+    display: none;
+    margin: 100px 100px;
+    padding: 20px 100px;
+    background-color: blue;
+}
+
+/* @media screen and (min-width: 636px) {
     .nav-links {
         margin-left: 5em;
         display: block;
@@ -79,4 +98,4 @@ h1 {
     .humberger {
         display: none;
     }
-}
+} */

@@ -4,6 +4,8 @@ import BaseLayout from './BaseLayout.astro'
 const {frontmatter} = Astro.props
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-    <p>作者 {frontmatter.author}, 发表于 {frontmatter.pubDate.toString().slice(0,10)}</p>
+    <h1>{frontmatter.title}</h1>
+    <img src={frontmatter.image.url} width="100%" alt={frontmatter.image.alt} />
+    <p>发表于 {frontmatter.pubDate.toString().slice(0,10)}</p>
     <slot />
 </BaseLayout>
