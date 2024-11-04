@@ -20,14 +20,26 @@ h1 {
     font-size: 2.5rem;
 }
 
-table {
+/* table {td tr tbody
     border: 1px solid black;
     border-collapse: collapse;
+} */
+table {
+    border: 1px solid black;
 }
 
-th td {
+th {
     border: 1px solid black;
-    padding: 8px;
+    background-color: lightgrey;
+    padding: 0;
+    margin: 0;
+}
+
+td {
+    border: 1px solid black;
+    padding: 0;
+    margin: 0;
+    /* background-color: rgb(189, 187, 187); */
 }
 
 /* .humberger {
