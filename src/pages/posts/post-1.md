@@ -5,7 +5,7 @@ pubDate: 2024-11-03
 description: '从系统层面理解WebRTC'
 author: 'soulliu'
 image:
-    url: '../../public/WebRTC_Logo.png'
+    url: '/WebRTCLogo.png'
     alt: 'webrtc logo.'
 tags: ["直播", "webrtc", "协议"]
 ---
