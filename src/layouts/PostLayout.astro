@@ -5,7 +5,19 @@ const {frontmatter} = Astro.props
 ---
 <BaseLayout pageTitle={frontmatter.title}>
     <h1>{frontmatter.title}</h1>
-    <img src={frontmatter.image.url} width="100%" alt={frontmatter.image.alt} />
-    <p>发表于 {frontmatter.pubDate.toString().slice(0,10)}</p>
+    <hr color="#cecece" size="1"/>
+    <div>
+        <p class="post-header">作者：刘翰林</p>
+        <p class="post-header">日期：{frontmatter.pubDate.toString().slice(0,10)}</p>
+    </div>
     <slot />
 </BaseLayout>
+
+<style is:global>
+	.post-header {
+		color: #8e8e8e;
+	}
+    br {
+        color: #cecece;
+    }
+</style>

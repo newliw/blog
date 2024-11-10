@@ -6,7 +6,7 @@ html {
 body {
     margin: 0 auto;
     width: 100%;
-    max-width: 80ch;
+    max-width: 120ch;
     padding: 1rem;
     line-height: 1.5;
 }
@@ -16,7 +16,12 @@ body {
 }
 
 h1 {
-    margin: 1rem 0;
+    margin: 1rem 1rem 0 0;
+    font-size: 2.5rem;
+}
+
+h2 {
+    margin: 2rem 1rem 0 0;
     font-size: 2.5rem;
 }
 
@@ -40,6 +45,11 @@ td {
     padding: 0;
     margin: 0;
     /* background-color: rgb(189, 187, 187); */
+}
+
+hr {
+    color:#cecece;
+    size: 1px;
 }
 
 /* .humberger {

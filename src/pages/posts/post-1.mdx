@@ -9,9 +9,17 @@ image:
     alt: 'webrtc logo.'
 tags: ["直播", "webrtc", "协议"]
 ---
+import { Image } from 'astro:assets';
+import myImage from "./public/WebRTC.png";
+import whipImage from "./public/WHIPWHEP.png";
+
+## 基本介绍
+<hr color="#cecece" size="1px"/>
+
  WebRTC（Web Real-Time Communication）是一套支持通过Web浏览器进行实时音视频通话的API和协议。WebRTC前身为GIPS引擎，被Google在2010年5月收购后改名为WebRTC，于2011年6月开源，2012年后，多家主流浏览器chrome、mozilla、opera等提供对WebRTC的支持。
 
  ## WebRTC的P2P通信
+ <hr color="#cecece" size="1px"/>
 WebRTC规范主要由两块组成，而每块又由多个其他规范构成。
 1. API规范，定义一系列的JavaScript API，由W3C标准组织维护。具体见[WebRTC API](https://www.w3.org/TR/webrtc/)
 2. 协议规范，定义音视频通话的交互过程，由IETF组织维护。协议规范不要求通信的对方一定是浏览器，只要实现这个规范的应用或设备都可以相互通信。具体见[RFC8825](https://datatracker.ietf.org/doc/html/rfc8825)
@@ -23,7 +31,7 @@ WebRTC规范主要由两块组成，而每块又由多个其他规范构成。
 
 一个典型的WebRTC通信系统组成如下：
 
-![WebRTC系统](./public/WebRTC.png)
+<Image src={myImage} alt="webrtc system" width="1200"/>
 
 以上系统实现了端到端的通信，但是当有第三个客户端C或更多客户端加入会话时，存在以下问题：
 1. C需要同时与A、B协商媒体、网络、密钥建立连接。不同客户端支持的编解码兼容性有差异，不同客户端NAT网络防火墙约束也可能不同，P2P通话容易失败。
@@ -36,6 +44,7 @@ WebRTC规范主要由两块组成，而每块又由多个其他规范构成。
 主流的WebRTC通信系统，会增加媒体服务器作为参与方，每个端都通过媒体服务器进行通信，在服务端可以做合流等各种管控。但由于WebRTC协议缺少对信令协议的规范，不同的WebRTC通信端信令可能各不相同，这就可能会导致不同的WebRTC产品或服务间通信存在兼容性问题。这时WHIP和WHEP就挺身而出了。
 
 ## WHIP和WHEP
+<hr color="#cecece" size="1px"/>
 
 RFC规范中描述的消息流如下：
 
@@ -104,9 +113,10 @@ RFC规范中描述的消息流如下：
 
 结合WebRTC通信过程分析，一个简单的WHIP、WHEP系统可以用下图表示：
 
-![WHIPWHEP](./public/WHIPWHEP.png)
+<Image src={whipImage} alt="whipImage system" width="1100"/>
 
  ## 协议规范
+ <hr color="#cecece" size="1px"/>
 | 协议       | 链接                                                       | 备注                           |
 | ---------- | ---------------------------------------------------------- | ------------------------------ |
 | WHIP       | https://datatracker.ietf.org/doc/html/draft-ietf-wish-whip |                                |
