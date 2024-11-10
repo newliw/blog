@@ -213,6 +213,9 @@
         <mxCell id="veZpopAs-0BX4lOy77DJ-82" value="&lt;div&gt;MediaServer&lt;/div&gt;&lt;div&gt;(controlled)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="720" y="785" width="160" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="veZpopAs-0BX4lOy77DJ-85" value="answer" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="420" y="950" width="60" height="30" as="geometry" />
+        </mxCell>
         <mxCell id="veZpopAs-0BX4lOy77DJ-87" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;直播服务器&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#666666;" vertex="1" parent="1">
           <mxGeometry x="750" y="865" width="100" height="30" as="geometry" />
         </mxCell>
